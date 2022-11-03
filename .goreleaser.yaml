@@ -13,6 +13,9 @@ builds:
       - linux
       - windows
       - darwin
+    goarch:
+      - amd64
+      - arm64
 archives:
   - replacements:
       darwin: Darwin
@@ -30,6 +33,12 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+nfpms:
+  -
+    formats:
+      - deb
+      - rpm
+      - apk
 
 # modelines, feel free to remove those if you don't want/use them:
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
